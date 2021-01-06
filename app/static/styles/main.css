@@ -97,6 +97,33 @@ svg {
   src: url("../fonts/Roboto/Roboto-Medium.ttf");
 }
 
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+  max-width: 1200px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+  max-width: 100%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row > * {
+  padding: 0 15px;
+}
+
 /* Animations */
 
 .animated {
@@ -357,4 +384,41 @@ body {
   width: 100%;
   padding: 0 15px;
   max-width: 1200px;
+}
+
+@media (max-width: 1230px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  html,
+  body {
+    font-size: 15px;
+  }
 }
