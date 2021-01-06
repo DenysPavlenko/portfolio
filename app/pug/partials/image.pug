@@ -1,0 +1,8 @@
+mixin image({ src, alt, classes })
+  -
+    const classnames = classNames({
+      'image': true,
+      [classes]: classes
+    })
+
+  img(src=src, alt=alt, class=classnames)

@@ -362,6 +362,11 @@ body {
   opacity: 1;
 }
 
+.image {
+  display: block;
+  width: 100%;
+}
+
 .header {
   position: fixed;
   width: 100%;
