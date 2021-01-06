@@ -385,6 +385,7 @@ h3,
   top: 0;
   left: 0;
   padding: 40px 0;
+  z-index: 100;
 }
 
 .header__container {
