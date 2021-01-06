@@ -331,6 +331,14 @@ body {
   color: #ffffff;
 }
 
+h3,
+.h3 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+
 .link {
   position: relative;
   display: inline-block;
@@ -354,6 +362,10 @@ body {
   -webkit-transform: translateY(2px) scaleX(0.9) skewY(7deg);
   transform: translateY(2px) scaleX(0.9) skewY(7deg);
   opacity: 0;
+}
+
+.link:hover {
+  color: #ffffff;
 }
 
 .link:hover:after {
