@@ -1,0 +1,9 @@
+mixin link({ text, href, classes })
+  -
+    const tag = href ? 'a' : 'span'
+    const classnames = classNames({
+      'link': true,
+      [classes]: classes
+    })
+
+  #{tag}(href=href class=classnames)| #{text}

@@ -1,0 +1,23 @@
+.link
+  position: relative
+  display: inline-block
+  font-size: rem(16px)
+  line-height: 1
+  font-weight: 400
+  letter-spacing: 0.05em
+  cursor: pointer
+  &:after
+    position: absolute
+    content: ''
+    left: 0
+    bottom: -4px
+    width: 100%
+    height: 1px
+    background-color:  $c-light
+    transition: all 0.3s ease
+    transform: translateY(2px) scaleX(.9) skewY(7deg)
+    opacity: 0
+  &:hover
+    &:after
+      transform: translateY(0) scaleX(1) skewY(0)
+      opacity: 1
