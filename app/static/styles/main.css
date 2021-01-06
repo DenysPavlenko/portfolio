@@ -304,14 +304,6 @@ body {
   color: #ffffff;
 }
 
-.cursor-default {
-  cursor: default;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .link {
   position: relative;
   display: inline-block;
