@@ -608,6 +608,18 @@ h3,
   padding-right: 15px;
 }
 
+.footer-screen__row {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.footer-screen__content {
+  width: 83.33333%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 @media (max-width: 1230px) {
   .container {
     max-width: 1140px;
