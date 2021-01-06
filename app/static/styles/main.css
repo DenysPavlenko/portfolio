@@ -408,6 +408,13 @@ p,
   max-width: 1200px;
 }
 
+.header__menu-link {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .header__menu-link.is-hidden {
   display: none;
 }

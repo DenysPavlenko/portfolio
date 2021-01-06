@@ -5,4 +5,5 @@ include /components/link
     .header__logo
       img(src="images/logo.png", alt="logo.svg")
     .header__menu
-      +link({text:'About me', classes:'header__menu-link'})
+      +link({text:'About me', classes:'header__menu-link'})(data-action="show")
+      +link({text:'Back', classes:'header__menu-link is-hidden'})(data-action="hide")
