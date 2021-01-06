@@ -1,0 +1,17 @@
+include /partials/preview-list
+include /partials/preview-image
+-
+  const data = [
+    {title:'Dido', type: 'landing page', name:'dido', preview:'http://example.com', git:'http://example.com', image:'images/previews/dido.png', imgAlt:'dido'},
+    {title:'Celia', type: 'portfolio', name:'celia', preview:'http://example.com', git:'http://example.com', image:'images/previews/dido.png', imgAlt:'dido'},
+    {title:'3d-Pesa', type: 'admin page', name:'3d-pesa', preview:'http://example.com', git:'http://example.com', image:'images/previews/dido.png', imgAlt:'dido'},
+    {title:'Games store', type: 'react app', name:'games-store', preview:'http://example.com', git:'http://example.com', image:'images/previews/dido.png', imgAlt:'dido'},
+  ]
+
+.preview-screen
+  .preview-screen__container.container
+    .preview-screen__row.row
+      .preview-screen__left
+        +preview-list({ data, classes:'js-preview-screen-list' })
+      .preview-screen__right
+        +preview-image({ data, classes:'js-preview-screen-image' })
