@@ -1,10 +1,12 @@
 extends /layouts/main
+include /components/about
 
 block variables
   - const title = 'Portfolio'
 
 block content
   include components/header
+  +about()
 
   .portfolio
     .portfolio__screen
