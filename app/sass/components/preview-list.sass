@@ -1,0 +1,67 @@
+.preview-list
+  display: flex
+  flex-direction: column
+  &__item
+    position: relative
+    user-select: none
+    &:not(:last-child)
+      margin-bottom: 30px
+    &.is-active
+      .preview-list__item-info
+        opacity: 1
+      .preview-list__item-type
+        opacity: 1
+        visibility: visible
+      .preview-list__item-actions
+        display: block
+      .preview-list__item-line:after
+        width: 50px
+    &-info
+      position: relative
+      display: inline-block
+      transition: 0.3s
+      margin-bottom: 20px
+      cursor: default
+      opacity: 0.3
+      &:hover
+        opacity: 1
+    &-title
+      display: block
+      cursor: pointer
+    &-type
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: -125px
+      font-size: rem(14px)
+      line-height: 1
+      font-weight: 500
+      letter-spacing: 0.05em
+      text-transform: uppercase
+      color: $c-muted
+      transition: .3s
+      text-align: right
+      display: block
+      width: 110px
+      visibility: hidden
+      opacity: 0
+    &-actions
+      display: none
+    &-action
+      text-transform: uppercase
+      &:not(:last-child)
+        margin-right: 30px
+    &-line
+      position: absolute
+      right: 0
+      top: 19px
+      &:after
+        position: absolute
+        left: -50px
+        top: 0
+        display: block
+        content: ''
+        transition: .3s
+        background-color: $c-muted
+        height: 2px
+        width: 0

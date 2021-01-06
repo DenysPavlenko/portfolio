@@ -1,0 +1,13 @@
+include /partials/image
+
+mixin preview-image({ data, classes })
+  -
+    const classnames = classNames({
+      'preview-image': true,
+      [classes]: classes
+    })
+
+  div(class=classnames)
+    each item, idx in data
+      div(class=`preview-image__item ${idx === 0 ? 'is-active' : ''}` data-image=item.name)
+        figure(class="preview-image__image" style=`background-image: url(${item.image})`)
