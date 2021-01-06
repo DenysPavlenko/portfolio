@@ -1,0 +1,16 @@
+include /partials/link
+-
+  const defaultLinks = [
+    {title:'Linkedin', link:'https://www.linkedin.com/in/denys-pavlenko-2972451ba/'},
+    {title:'Upwork', link:'https://www.upwork.com/freelancers/~01afbe36b18bde6452'},
+    {title:'Envato', link:'https://themeforest.net/user/themescode/portfolio'},
+    {title:'de.pavlenko@gmail.com', link:'mailto:de.pavlenko@gmail.com'},
+  ]
+
+mixin social-links({ links })
+  -var data = links ? links : defaultLinks
+
+  .social-links
+    each item, idx in data
+      .social-links__link
+        +link({ href:item.link, text:item.title })
