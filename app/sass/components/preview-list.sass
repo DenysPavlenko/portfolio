@@ -5,10 +5,12 @@
     position: relative
     user-select: none
     &:not(:last-child)
-      margin-bottom: 30px
+      margin-bottom: 45px
     &.is-active
       .preview-list__item-info
         opacity: 1
+      .preview-list__item-title
+        font-size: rem(36px)
       .preview-list__item-type
         opacity: 1
         visibility: visible
@@ -20,35 +22,41 @@
       position: relative
       display: inline-block
       transition: 0.3s
-      margin-bottom: 20px
       cursor: default
       opacity: 0.3
       &:hover
         opacity: 1
     &-title
-      display: block
+      font-size: rem(24px)
+      font-weight: 500
+      line-height: 1
+      letter-spacing: 0.025em
       cursor: pointer
+      transition: 0.3s
     &-type
       position: absolute
+      display: block
+      width: 110px
       top: 50%
       transform: translateY(-50%)
-      left: -125px
+      left: -140px
       font-size: rem(14px)
       line-height: 1
       font-weight: 500
       letter-spacing: 0.05em
       text-transform: uppercase
       color: $c-muted
-      transition: .3s
       text-align: right
-      display: block
-      width: 110px
+      transition: .3s
       visibility: hidden
       opacity: 0
     &-actions
       display: none
+      margin-top: 30px
     &-action
       text-transform: uppercase
+      font-size: rem(20px)
+      font-weight: 400
       &:not(:last-child)
         margin-right: 30px
     &-line

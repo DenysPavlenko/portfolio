@@ -10,7 +10,7 @@ mixin preview-list({ data, classes })
     each item, idx in data
       div(class=`preview-list__item ${idx === 0 ? 'is-active' : ''}` data-name=item.name)
         div(class="preview-list__item-info")
-          h3(class="preview-list__item-title") #{item.title}
+          span(class="preview-list__item-title") #{item.title}
           span.preview-list__item-type #{item.type}
         div(class="preview-list__item-actions")
           +link({href:item.preview, text:'Preview', classes:'preview-list__item-action'})
