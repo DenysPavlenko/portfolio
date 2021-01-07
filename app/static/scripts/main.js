@@ -28,22 +28,16 @@ var previewScreen = function previewScreen() {
 
 var toggleAbout = function toggleAbout() {
   var $about = $('.about');
+  var $aboutLinks = $('.header__menu-links');
   var $aboutLink = $('.header__menu-link');
-  var $showLink = $('.header__menu [data-action="show"]');
-  var $hideLink = $('.header__menu [data-action="hide"]');
   $aboutLink.on('click', function () {
     $about.toggleClass('is-active');
+    $aboutLinks.toggleClass('is-active');
 
     if ($about.hasClass('is-active')) {
       $.fn.fullpage.setAllowScrolling(false);
-      $showLink.fadeOut(100, function () {
-        $hideLink.fadeIn();
-      });
     } else {
       $.fn.fullpage.setAllowScrolling(true);
-      $hideLink.fadeOut(100, function () {
-        $showLink.fadeIn();
-      });
     }
   });
 };
