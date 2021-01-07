@@ -13,6 +13,6 @@ mixin preview-list({ data, classes })
           span(class="preview-list__item-title") #{item.title}
           span.preview-list__item-type #{item.type}
         div(class="preview-list__item-actions")
-          +link({href:item.preview, text:'Preview', classes:'preview-list__item-action'})
-          +link({href:item.git, text:'Github', classes:'preview-list__item-action'})
+          +link({href:item.preview, text:'Preview', classes:'preview-list__item-action'})(target="_blank")
+          +link({href:item.git, text:'Github', classes:'preview-list__item-action'})(target="_blank")
         .preview-list__item-line
