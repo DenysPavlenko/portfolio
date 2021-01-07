@@ -637,14 +637,18 @@ p,
 }
 
 .home-screen__content {
+  position: relative;
   width: 83.33333%;
   padding-left: 15px;
   padding-right: 15px;
   text-align: center;
+  height: 80vh;
+  max-height: 800px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .home-screen__title {
-  position: relative;
   font-size: 7.5rem;
   line-height: 1;
   font-weight: 500;
