@@ -1,8 +1,11 @@
-mixin image({ src, alt, classes })
+mixin image({ src, alt, classes, bgimage })
   -
+    const tag = bgimage ? 'figure' : 'img'
     const classnames = classNames({
       'image': true,
+      'image--bg': bgimage,
       [classes]: classes
     })
+    const style = bgimage && `background-image: url(${bgimage})`
 
-  img(src=src, alt=alt, class=classnames)
+  #{tag}(src=src, alt=alt, class=classnames, style=style)
