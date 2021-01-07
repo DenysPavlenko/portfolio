@@ -10,7 +10,27 @@
     justify-content: space-between
     align-items: center
     +container($cnt-xxl)
-  &__menu-link
+  &__menu
     user-select: none
-    &.is-hidden
-      display: none
+  &__menu-links
+    position: relative
+    display: flex
+    flex-direction: column
+    &.is-active
+      .header__menu-link
+        &:last-child
+          opacity: 0
+          transform: translate(0, 20px)
+        &:first-child
+          opacity: 1
+          transform: translate(0, 0)
+  &__menu-link
+    white-space: nowrap
+    transition: 0.5s cubic-bezier(0.5,-1, 0.5, 2)
+    &:first-child
+      opacity: 0
+      transform: translate(0, -20px)
+    &:last-child
+      position: absolute
+      transform: translate(0, 0px)
+      right: 0
