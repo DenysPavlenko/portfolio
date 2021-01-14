@@ -415,6 +415,10 @@ p,
   max-width: 1200px;
 }
 
+.header__logo {
+  width: 60px;
+}
+
 .header__menu {
   -webkit-user-select: none;
   -moz-user-select: none;
