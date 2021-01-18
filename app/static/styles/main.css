@@ -697,8 +697,8 @@ p,
   top: 0;
   left: 0;
   height: 0;
-  width: 4px;
-  background-color: #ffffff;
+  width: 2px;
+  background-color: #3b3b3b;
   -webkit-animation: scroll-indicator 3s cubic-bezier(0.7, 0.5, 0.4, 1) infinite;
   animation: scroll-indicator 3s cubic-bezier(0.7, 0.5, 0.4, 1) infinite;
 }
