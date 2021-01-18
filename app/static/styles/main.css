@@ -763,8 +763,13 @@ p,
   z-index: 2;
 }
 
+.home-screen__title span {
+  font-family: serif;
+  font-style: italic;
+}
+
 .home-screen__image {
-  margin-top: -40px;
+  margin-top: -52px;
 }
 
 .preview-screen__row {
