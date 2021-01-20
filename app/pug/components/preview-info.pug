@@ -1,0 +1,15 @@
+include /components/link
+mixin preview-info({ item, classes })
+  -
+    const classnames = classNames({
+      'preview-info': true,
+      [classes]: classes
+    })
+
+  div(class=classnames)
+    .preview-info__details
+      span.preview-info__title #{item.title}
+      span.preview-info__type #{item.type}
+    .preview-info__actions
+      +link({href:item.preview, text:'Preview', classes:'preview-info__action'})(target="_blank")
+      +link({href:item.git, text:'Github', classes:'preview-info__action'})(target="_blank")

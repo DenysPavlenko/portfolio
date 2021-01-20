@@ -1,6 +1,6 @@
-include /components/preview-list
-include /components/preview-image
+include /components/preview-info
 include /components/scroll-indicator
+include /components/image
 -
   const data = [
     {title:'Celia', type: 'portfolio', name:'celia', preview:'http://themescode.com.ua/websites/Celia/', git:'https://github.com/DenysPavlenko/Celia', image:'images/previews/dido.png'},
@@ -12,8 +12,10 @@ include /components/scroll-indicator
 .preview-screen
   .preview-screen__container.container
     .preview-screen__row.row
-      .preview-screen__left
-        +preview-list({ data, classes:'js-preview-screen-list' })
-      .preview-screen__right
-        +preview-image({ data, classes:'js-preview-screen-image' })
+      each item in data
+        .preview-screen__item
+          .preview-screen__item-info
+            +preview-info({item})
+          .preview-screen__item-preview
+            +image({bgimage:item.image, classes:'preview-screen__item-image'})
   +scroll-indicator({})

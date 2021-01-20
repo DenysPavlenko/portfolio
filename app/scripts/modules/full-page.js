@@ -1,6 +1,7 @@
 const fullPage = () => {
   $('.portfolio').fullpage({
     sectionSelector: $('.portfolio__screen'),
+    scrollOverflow: true,
   });
 };
 

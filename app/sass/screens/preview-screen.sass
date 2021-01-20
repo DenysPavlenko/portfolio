@@ -1,8 +1,16 @@
 .preview-screen
   &__row
+    flex-direction: column
+  &__item
+    display: flex
     justify-content: center
     align-items: center
-  &__left
-    +col(4)
-  &__right
-    +col(6)
+    &:not(:last-child)
+      margin-bottom: 100px
+    &-info
+      +col(4)
+    &-preview
+      +col(5)
+      height: 400px
+    &-image
+      background-size: contain
