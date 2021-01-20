@@ -1,18 +1,22 @@
 .preview-info
   display: flex
   flex-direction: column
+  &.is-active
+    .preview-info__title
+      font-size: rem(36px)
   &__details
     display: flex
     align-items: center
     margin-bottom: 35px
     user-select: none
   &__title
-    font-size: rem(36px)
+    font-size: rem(24px)
     font-weight: 500
     line-height: 1
     letter-spacing: 0.025em
     margin-right: 35px
     cursor: pointer
+    transition: 0.2s
   &__type
     font-size: rem(14px)
     line-height: 1

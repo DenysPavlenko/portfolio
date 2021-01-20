@@ -12,10 +12,10 @@ include /components/image
 .preview-screen.js-preview-screen
   .preview-screen__container.container
     .preview-screen__row.row
-      each item in data
+      each item, idx in data
         .preview-screen__item.js-preview-screen-item
           .preview-screen__item-info
-            +preview-info({item})
+            +preview-info({item, classes:`js-preview-info ${idx === 0 ? 'is-active' : ''}`})
           .preview-screen__item-preview
             +image({bgimage:item.image, classes:'preview-screen__item-image'})
   +scroll-indicator({})

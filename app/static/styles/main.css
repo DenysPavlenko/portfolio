@@ -483,6 +483,10 @@ p,
   flex-direction: column;
 }
 
+.preview-info.is-active .preview-info__title {
+  font-size: 2.25rem;
+}
+
 .preview-info__details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -498,12 +502,14 @@ p,
 }
 
 .preview-info__title {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1;
   letter-spacing: 0.025em;
   margin-right: 35px;
   cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .preview-info__type {
