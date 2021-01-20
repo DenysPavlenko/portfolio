@@ -1,29 +1,60 @@
 'use strict';
 
 var fullPage = function fullPage() {
-  $('.portfolio').fullpage({
-    sectionSelector: $('.portfolio__screen'),
-    scrollOverflow: true
+  var scrollBar = SimpleBar.instances.get($('.js-preview-screen-scroll')[0]).getScrollElement();
+  var $psWrap = $('.js-preview-screen-wrap');
+  var $psItems = $('.js-preview-screen-item');
+  var $psFirstItem = $psItems.eq(0);
+  new fullpage('.portfolio', {
+    sectionSelector: '.js-portfolio-screen',
+    normalScrollElements: '.js-preview-screen',
+    afterLoad: function afterLoad(origin, destination, direction) {
+      // Add or remove 1px to (from) scrollBar. It helps to trigger scrollBar's 'scroll' event.
+      if (destination.index === 1 && direction === 'down') {
+        scrollBar.scrollTop = 1;
+      }
+
+      if (destination.index === 1 && direction === 'up') {
+        var psWrapHeight = $psWrap.height();
+        var psFirstItemHeight = $psFirstItem.height();
+        scrollBar.scrollTop = psWrapHeight - psFirstItemHeight - 1;
+      }
+    }
   });
 };
 
 var previewScreen = function previewScreen() {
-  var $previewScreen = $('.js-preview-screen');
-  var $items = $('.js-preview-screen-item');
-  var $firstItem = $items.eq(0);
+  var scrollBar = SimpleBar.instances.get($('.js-preview-screen-scroll')[0]).getScrollElement();
+  var $psWrap = $('.js-preview-screen-wrap');
+  var $psItems = $('.js-preview-screen-item');
+  var $psFirstItem = $psItems.eq(0);
   var $window = $(window);
+  var psFirstItemHeight, windowHeight; // Listen scrollBar scroll event
+
+  $(scrollBar).on('scroll', function () {
+    var psWrapTopOffset = Math.round($psWrap.offset().top);
+    var psWrapHeight = $psWrap.height();
+    var bottomLine = Math.round(psFirstItemHeight - psWrapHeight); // If scroll position >= 0 - move to the prev slide
+
+    if (psWrapTopOffset >= 0) {
+      fullpage_api.moveSectionUp();
+    } // If scroll at the bottom - move to the next slide
+    else if (psWrapTopOffset <= bottomLine) {
+        fullpage_api.moveSectionDown();
+      }
+  });
 
   var handlePadding = function handlePadding() {
     // Get window height and first item height
-    var windowHeight = $window.height();
-    var firstItemHeight = $firstItem.height(); // Calc and set padding-top and padding-bottom
+    windowHeight = $window.height();
+    psFirstItemHeight = $psFirstItem.height(); // Calc and set padding-top and padding-bottom
 
-    var py = (windowHeight - firstItemHeight) / 2;
-    $previewScreen.css('padding', "".concat(py, "px 0"));
-  }; // Set padding to $previewScreen.
+    var py = (windowHeight - psFirstItemHeight) / 2;
+    $psWrap.css('padding', "".concat(py, "px 0"));
+  }; // Set padding to $psWrap.
 
 
-  handlePadding(); // Set padding on resize to $previewScreen with a small dealy
+  handlePadding(); // Set padding on resize to $psWrap with a small dealy
 
   var timeOut;
   $window.on('resize', function () {

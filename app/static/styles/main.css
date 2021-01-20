@@ -347,6 +347,18 @@ p,
   letter-spacing: 0.025em;
 }
 
+.custom-scroll {
+  height: 100%;
+}
+
+.custom-scroll .simplebar-scrollbar:before {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.17);
+  right: 0;
+  left: auto;
+  width: 5px;
+}
+
 .fp-scroller {
   -webkit-transition-duration: 500ms !important;
   transition-duration: 500ms !important;
@@ -678,6 +690,10 @@ p,
 
 .home-screen__image {
   margin-top: -52px;
+}
+
+.preview-screen__scroll {
+  height: 100vh;
 }
 
 .preview-screen__row {

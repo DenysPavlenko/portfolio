@@ -40,7 +40,8 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
-    "fullpage.js": "^2.9.7",
-    "jquery": "^3.5.1"
+    "fullpage.js": "^3.0.9",
+    "jquery": "^3.5.1",
+    "simplebar": "^5.3.0"
   }
 }

@@ -1,3 +1,3 @@
 import 'jquery';
-import 'fullpage.js/dist/jquery.fullpage';
-import 'fullpage.js/vendors/scrolloverflow';
+import 'simplebar/dist/simplebar';
+import 'fullpage.js/dist/fullpage';
