@@ -7,6 +7,33 @@ var fullPage = function fullPage() {
   });
 };
 
+var previewScreen = function previewScreen() {
+  var $previewScreen = $('.js-preview-screen');
+  var $items = $('.js-preview-screen-item');
+  var $firstItem = $items.eq(0);
+  var $window = $(window);
+
+  var handlePadding = function handlePadding() {
+    // Get window height and first item height
+    var windowHeight = $window.height();
+    var firstItemHeight = $firstItem.height(); // Calc and set padding-top and padding-bottom
+
+    var py = (windowHeight - firstItemHeight) / 2;
+    $previewScreen.css('padding', "".concat(py, "px 0"));
+  }; // Set padding to $previewScreen.
+
+
+  handlePadding(); // Set padding on resize to $previewScreen with a small dealy
+
+  var timeOut;
+  $window.on('resize', function () {
+    clearTimeout(timeOut);
+    timeOut = setTimeout(function () {
+      handlePadding();
+    }, 500);
+  });
+};
+
 var toggleAbout = function toggleAbout() {
   var $about = $('.about');
   var $aboutLinks = $('.header__menu-links');
@@ -25,6 +52,7 @@ var toggleAbout = function toggleAbout() {
 
 $(function () {
   fullPage();
+  previewScreen();
   toggleAbout();
 }); // On window load
 

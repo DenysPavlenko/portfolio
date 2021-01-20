@@ -9,11 +9,11 @@ include /components/image
     {title:'Games store', type: 'react app', name:'games-store', preview:'https://games-store-denys.herokuapp.com/', git:'https://github.com/DenysPavlenko/games-store', image:'images/previews/dido.png'},
   ]
 
-.preview-screen
+.preview-screen.js-preview-screen
   .preview-screen__container.container
     .preview-screen__row.row
       each item in data
-        .preview-screen__item
+        .preview-screen__item.js-preview-screen-item
           .preview-screen__item-info
             +preview-info({item})
           .preview-screen__item-preview
