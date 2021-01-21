@@ -1,6 +1,5 @@
-include /components/preview-info
 include /components/scroll-indicator
-include /components/image
+include /components/preview-item
 -
   const data = [
     {title:'Celia', type: 'portfolio', name:'celia', preview:'http://themescode.com.ua/websites/Celia/', git:'https://github.com/DenysPavlenko/Celia', image:'images/previews/dido.png'},
@@ -15,9 +14,5 @@ include /components/image
       .preview-screen__container.container
         .preview-screen__row.row
           each item, idx in data
-            .preview-screen__item.js-preview-screen-item
-              .preview-screen__item-info
-                +preview-info({item})
-              .preview-screen__item-preview
-                +image({bgimage:item.image, classes:'preview-screen__item-image'})
+            +preview-item({item, classes:`preview-screen__item js-preview-screen-item ${idx === 0 ? 'is-active' : ''}`})
   +scroll-indicator({})

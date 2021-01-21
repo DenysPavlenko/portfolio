@@ -1,0 +1,16 @@
+include /components/preview-info
+include /components/scroll-indicator
+include /components/image
+
+mixin preview-item({item, classes})
+  -
+    const classnames = classNames({
+      'preview-item': true,
+      [classes]: classes
+    })
+
+  div(class=classnames)
+    .preview-item__info
+      +preview-info({item})
+    .preview-item__preview
+      +image({bgimage:item.image, classes:'preview-item__image'})

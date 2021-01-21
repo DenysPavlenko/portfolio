@@ -1,0 +1,13 @@
+.preview-item
+  display: flex
+  justify-content: center
+  align-items: center
+  &:not(:last-child)
+    margin-bottom: 100px
+  &__info
+    +col(4)
+  &__preview
+    +col(5)
+    height: 400px
+  &__image
+    background-size: contain
