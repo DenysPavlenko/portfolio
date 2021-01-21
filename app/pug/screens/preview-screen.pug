@@ -17,7 +17,7 @@ include /components/image
           each item, idx in data
             .preview-screen__item.js-preview-screen-item
               .preview-screen__item-info
-                +preview-info({item, classes:`js-preview-info ${idx === 0 ? 'is-active' : ''}`})
+                +preview-info({item})
               .preview-screen__item-preview
                 +image({bgimage:item.image, classes:'preview-screen__item-image'})
   +scroll-indicator({})
