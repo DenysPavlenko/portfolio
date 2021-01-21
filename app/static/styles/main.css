@@ -497,10 +497,6 @@ p,
   align-items: center;
 }
 
-.preview-item:not(:last-child) {
-  margin-bottom: 100px;
-}
-
 .preview-item__info {
   width: 33.33333%;
   padding-left: 15px;
@@ -728,6 +724,10 @@ p,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.preview-screen__item:not(:last-child) {
+  margin-bottom: 120px;
 }
 
 .footer-screen__row {
