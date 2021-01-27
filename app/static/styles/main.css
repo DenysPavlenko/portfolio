@@ -545,6 +545,13 @@ p,
   height: 100%;
 }
 
+.space-background__main {
+  left: -1.2%;
+  top: -1.2%;
+  width: 102.4%;
+  height: 102.4%;
+}
+
 .space-background__circle {
   top: 0;
   left: 43%;
