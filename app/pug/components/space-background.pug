@@ -1,0 +1,10 @@
+include /components/image
+
+mixin space-background()
+  .space-background.js-space-background
+    div(class="space-background__layer" data-depth="0.10")
+      .space-background__wrap
+        +image({bgimage:'images/space-background/main-bg.jpg'})
+    div(class="space-background__layer" data-depth="0.20")
+      .space-background__wrap.space-background__circle
+        +image({bgimage:'images/space-background/circle.png'})

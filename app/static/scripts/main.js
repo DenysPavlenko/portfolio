@@ -5,9 +5,17 @@ var fullPage = function fullPage() {
   var $psWrap = $('.js-preview-screen-wrap');
   var $psItems = $('.js-preview-screen-item');
   var $psFirstItem = $psItems.eq(0);
+  var $spaceBackground = $('.js-space-background');
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
     normalScrollElements: '.js-preview-screen',
+    onLeave: function onLeave(origin, destination) {
+      if (destination.index === 1) {
+        $spaceBackground.css('opacity', 1);
+      } else if (destination.index === 0 || destination.index === 2) {
+        $spaceBackground.css('opacity', 0);
+      }
+    },
     afterLoad: function afterLoad(origin, destination, direction) {
       // Add or remove 1px to (from) scrollBar. It helps to trigger scrollBar's 'scroll' event.
       if (destination.index === 1 && direction === 'down') {
@@ -81,10 +89,16 @@ var toggleAbout = function toggleAbout() {
   });
 };
 
+var spaceBackground = function spaceBackground() {
+  var spaceBackground = $('.js-space-background').get(0);
+  new Parallax(spaceBackground);
+};
+
 $(function () {
   fullPage();
   previewScreen();
   toggleAbout();
+  spaceBackground();
 }); // On window load
 
 $(window).on('load', function () {});
