@@ -716,6 +716,13 @@ p,
   margin-top: -52px;
 }
 
+.preview-screen {
+  background-image: url("../images/preview-screen-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
 .preview-screen__scroll {
   height: 100vh;
 }
