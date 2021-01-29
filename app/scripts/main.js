@@ -1,14 +1,14 @@
 'use strict';
 import fullPage from './modules/full-page';
 import previewScreen from './modules/preview-screen';
-import toggleAbout from './modules/toggle-about';
+import about from './modules/about';
 import spaceBackground from './modules/space-background';
 
 // On document ready
 $(function () {
   fullPage();
   previewScreen();
-  toggleAbout();
+  about();
   spaceBackground();
 });
 

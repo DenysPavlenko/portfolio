@@ -131,8 +131,8 @@ svg {
 }
 
 .fadeIn {
-  -webkit-animation: fadeIn 1s ease-in-out forwards;
-  animation: fadeIn 1s ease-in-out forwards;
+  -webkit-animation: fadeIn 0.7s ease-in-out forwards;
+  animation: fadeIn 0.7s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeIn {
@@ -156,8 +156,8 @@ svg {
 }
 
 .fadeInUp {
-  -webkit-animation: fadeInUp 1s ease-in-out forwards;
-  animation: fadeInUp 1s ease-in-out forwards;
+  -webkit-animation: fadeInUp 0.7s ease-in-out forwards;
+  animation: fadeInUp 0.7s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeInUp {
@@ -189,8 +189,8 @@ svg {
 }
 
 .fadeInDown {
-  -webkit-animation: fadeInDown 1s ease-in-out forwards;
-  animation: fadeInDown 1s ease-in-out forwards;
+  -webkit-animation: fadeInDown 0.7s ease-in-out forwards;
+  animation: fadeInDown 0.7s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -222,8 +222,8 @@ svg {
 }
 
 .fadeInLeft {
-  -webkit-animation: fadeInLeft 1s ease-in-out forwards;
-  animation: fadeInLeft 1s ease-in-out forwards;
+  -webkit-animation: fadeInLeft 0.7s ease-in-out forwards;
+  animation: fadeInLeft 0.7s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -255,8 +255,8 @@ svg {
 }
 
 .fadeInRight {
-  -webkit-animation: fadeInRight 1s ease-in-out forwards;
-  animation: fadeInRight 1s ease-in-out forwards;
+  -webkit-animation: fadeInRight 0.7s ease-in-out forwards;
+  animation: fadeInRight 0.7s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeInRight {
@@ -288,8 +288,8 @@ svg {
 }
 
 .zoomIn {
-  -webkit-animation: zoomIn 1s ease-in-out forwards;
-  animation: zoomIn 1s ease-in-out forwards;
+  -webkit-animation: zoomIn 0.7s ease-in-out forwards;
+  animation: zoomIn 0.7s ease-in-out forwards;
 }
 
 @-webkit-keyframes zoomIn {
@@ -670,8 +670,8 @@ p,
   overflow: auto;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: 0.5s cubic-bezier(0.3, -0.2, 0.3, 1.2);
-  transition: 0.5s cubic-bezier(0.3, -0.2, 0.3, 1.2);
+  -webkit-transition: 0.8s cubic-bezier(0.3, -0.2, 0.3, 1.2);
+  transition: 0.8s cubic-bezier(0.3, -0.2, 0.3, 1.2);
 }
 
 .about.is-active {

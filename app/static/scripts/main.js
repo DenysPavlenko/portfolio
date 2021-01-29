@@ -56,19 +56,43 @@ var previewScreen = function previewScreen() {
   });
 };
 
-var toggleAbout = function toggleAbout() {
+var about = function about() {
   var $about = $('.about');
-  var $aboutLinks = $('.header__menu-links');
-  var $aboutLink = $('.header__menu-link');
-  $aboutLink.on('click', function () {
+  var $headerMenuLinks = $('.js-header-menu-links');
+  var $headerMenuLink = $('.js-header-menu-link');
+  var $aboutLinks = $('.js-about-links');
+  var $aboutText = $('.js-about-text');
+  var isOpen = false;
+  var inTransition;
+
+  var handleAnimation = function handleAnimation() {
+    inTransition = false;
+
+    if (isOpen) {
+      $aboutLinks.addClass('fadeInDown');
+      $aboutText.addClass('fadeInDown');
+    } else {
+      $aboutLinks.removeClass('fadeInDown');
+      $aboutText.removeClass('fadeInDown');
+    }
+  };
+
+  $headerMenuLink.on('click', function () {
+    if (inTransition) return;
+    inTransition = true;
     $about.toggleClass('is-active');
-    $aboutLinks.toggleClass('is-active');
+    $headerMenuLinks.toggleClass('is-active');
+    $about.off('transitionend', handleAnimation); // Lock/unlock fullpage scroll
 
     if ($about.hasClass('is-active')) {
-      $.fn.fullpage.setAllowScrolling(false);
+      fullpage_api.setAllowScrolling(false);
+      isOpen = true;
     } else {
-      $.fn.fullpage.setAllowScrolling(true);
+      fullpage_api.setAllowScrolling(true);
+      isOpen = false;
     }
+
+    $about.on('transitionend', handleAnimation);
   });
 };
 
@@ -80,7 +104,7 @@ var spaceBackground = function spaceBackground() {
 $(function () {
   fullPage();
   previewScreen();
-  toggleAbout();
+  about();
   spaceBackground();
 }); // On window load
 

@@ -5,6 +5,6 @@ include /components/link
     .header__logo
       img(src="images/logo.svg", alt="logo")
     .header__menu
-      .header__menu-links
-        +link({text:'Back', classes:'header__menu-link'})
-        +link({text:'About me', classes:'header__menu-link'})
+      .header__menu-links.js-header-menu-links
+        +link({text:'Back', classes:'header__menu-link js-header-menu-link'})
+        +link({text:'About me', classes:'header__menu-link js-header-menu-link'})
