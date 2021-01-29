@@ -2,9 +2,27 @@ include /components/image
 
 mixin space-background()
   .space-background.js-space-background
-    div(class="space-background__layer" data-depth="0.10")
+    //- Main
+    div(class="space-background__layer" data-depth="0.05")
       .space-background__wrap.space-background__main
         +image({bgimage:'images/space-background/main-bg.jpg'})
-    div(class="space-background__layer" data-depth="0.20")
+    //- Left top dots
+    div(class="space-background__layer" data-depth="0.1")
+      .space-background__wrap.space-background__left-top-dots
+        +image({bgimage:'images/space-background/left-top-dots.png', classes: 'space-background__image'})
+    //- Left bottom dots
+    div(class="space-background__layer" data-depth="0.1")
+      .space-background__wrap.space-background__left-bottom-dots
+        +image({bgimage:'images/space-background/left-bottom-dots.png', classes: 'space-background__image'})
+    //- Center circle
+    div(class="space-background__layer" data-depth="0.2")
       .space-background__wrap.space-background__circle
         +image({bgimage:'images/space-background/circle.png'})
+    //- Right top dots
+    div(class="space-background__layer" data-depth="0.1")
+      .space-background__wrap.space-background__right-top-dots
+        +image({bgimage:'images/space-background/right-top-dots.png', classes: 'space-background__image'})
+    //- Right bottom dots
+    div(class="space-background__layer" data-depth="0.1")
+      .space-background__wrap.space-background__right-bottom-dots
+        +image({bgimage:'images/space-background/right-bottom-dots.png', classes: 'space-background__image'})
