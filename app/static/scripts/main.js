@@ -4,6 +4,7 @@ var fullPage = function fullPage() {
   var $spaceBackground = $('.js-space-background');
   var $homeScreenTitles = $('.js-home-screen-text');
   var $homeScreenImage = $('.js-home-screen-image');
+  var $footerScreenLinks = $('.js-footer-screen-links');
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
     scrollOverflow: true,
@@ -11,6 +12,10 @@ var fullPage = function fullPage() {
       if (destination.index === 0) {
         $homeScreenTitles.addClass('is-active');
         $homeScreenImage.addClass('is-active');
+      }
+
+      if (destination.index === 2) {
+        $footerScreenLinks.addClass('is-active');
       }
     },
     onLeave: function onLeave(origin, destination) {

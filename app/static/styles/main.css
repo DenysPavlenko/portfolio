@@ -850,6 +850,10 @@ p,
   padding-right: 15px;
 }
 
+.footer-screen__links {
+  padding: 20px 0;
+}
+
 @media (max-width: 1230px) {
   .container {
     max-width: 1140px;

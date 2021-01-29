@@ -2,6 +2,7 @@ const fullPage = () => {
   const $spaceBackground = $('.js-space-background');
   const $homeScreenTitles = $('.js-home-screen-text');
   const $homeScreenImage = $('.js-home-screen-image');
+  const $footerScreenLinks = $('.js-footer-screen-links');
 
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
@@ -11,6 +12,9 @@ const fullPage = () => {
         $homeScreenTitles.addClass('is-active');
         $homeScreenImage.addClass('is-active');
       }
+      if (destination.index === 2) {
+        $footerScreenLinks.addClass('is-active');
+      }
     },
     onLeave: (origin, destination) => {
       if (destination.index === 1) {
@@ -19,6 +23,7 @@ const fullPage = () => {
         $spaceBackground.css('opacity', 0)
       }
     },
+
   });
 };
 

@@ -1,8 +1,10 @@
 include /components/social-links
 include /components/scroll-indicator
+include /components/pop-animation
 
 .footer-screen
   .footer-screen__container.container
     .footer-screen__row.row
       .footer-screen__content
-        +social-links({})
+        +pop-animation({classes:'footer-screen__links js-footer-screen-links'})
+          +social-links({})
