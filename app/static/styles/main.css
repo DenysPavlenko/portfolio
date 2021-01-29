@@ -347,18 +347,6 @@ p,
   letter-spacing: 0.025em;
 }
 
-.custom-scroll {
-  height: 100%;
-}
-
-.custom-scroll .simplebar-scrollbar:before {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.17);
-  right: 0;
-  left: auto;
-  width: 5px;
-}
-
 .fp-scroller {
   -webkit-transition-duration: 500ms !important;
   transition-duration: 500ms !important;
@@ -519,7 +507,7 @@ p,
 }
 
 .space-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -527,8 +515,8 @@ p,
   width: 100%;
   height: 100%;
   z-index: -1;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: 1s;
+  transition: 1s;
   opacity: 0;
 }
 
@@ -802,12 +790,14 @@ p,
   margin-top: -52px;
 }
 
-.preview-screen {
-  position: relative;
-}
-
-.preview-screen__scroll {
-  height: 100vh;
+.preview-screen__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100vh;
+  z-index: -1;
 }
 
 .preview-screen__row {

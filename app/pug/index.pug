@@ -1,5 +1,6 @@
 extends /layouts/main
 include /components/about
+include /components/space-background
 
 block variables
   - const title = 'Portfolio'
@@ -7,6 +8,7 @@ block variables
 block content
   include components/header
   +about()
+  +space-background()
 
   .portfolio
     .portfolio__screen.js-portfolio-screen

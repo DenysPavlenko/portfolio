@@ -1,6 +1,5 @@
 include /components/scroll-indicator
 include /components/preview-item
-include /components/space-background
 -
   const data = [
     {title:'Celia', type: 'portfolio', name:'celia', preview:'http://themescode.com.ua/websites/Celia/', git:'https://github.com/DenysPavlenko/Celia', image:'images/previews/dido.png'},
@@ -10,11 +9,9 @@ include /components/space-background
   ]
 
 .preview-screen.js-preview-screen
-  +space-background()
-  div(data-simplebar class="custom-scroll preview-screen__scroll js-preview-screen-scroll")
-    .js-preview-screen-wrap
-      .preview-screen__container.container
-        .preview-screen__row.row
-          each item, idx in data
-            +preview-item({item, classes:`preview-screen__item js-preview-screen-item ${idx === 0 ? 'is-active' : ''}`})
+
+  .preview-screen__container.container
+    .preview-screen__row.row
+      each item, idx in data
+        +preview-item({item, classes:`preview-screen__item js-preview-screen-item ${idx === 0 ? 'is-active' : ''}`})
   +scroll-indicator({})
