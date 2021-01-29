@@ -1,0 +1,12 @@
+mixin pop-animation({classes, delay, sm})
+  -
+    const classnames = classNames({
+      'pop-animation': true,
+      'pop-animation--sm': sm,
+      [classes]: classes
+    })
+    const transDelay = delay ? `transition-delay: ${delay}` : ''
+
+  div(class=classnames)
+    .pop-animation__wrap(style=transDelay)
+      block

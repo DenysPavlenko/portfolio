@@ -1,0 +1,14 @@
+.pop-animation
+  overflow: hidden
+  &.is-active
+    .pop-animation__wrap
+      transform: translateY(0)
+      opacity: 1
+  &--sm
+    .pop-animation__wrap
+      transform: translateY(20%)
+  &__wrap
+    height: 100%
+    transform: translateY(100%)
+    opacity: 0
+    transition: 0.8s ease

@@ -8,13 +8,16 @@
     height: 75vh
     max-height: 800px
     overflow: hidden
-  &__title
+  &__title,
+  &__sub-title
     font-size: rem(120px)
     line-height: 1
     font-weight: 500
-    z-index: 2
-    span
-      font-family: serif
-      font-style: italic
+  &__title
+    font-family: serif
+    font-style: italic
   &__image
+    position: relative
     margin-top: -52px
+    height: 100%
+    z-index: -1

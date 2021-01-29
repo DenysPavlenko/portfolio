@@ -2,9 +2,17 @@
 
 var fullPage = function fullPage() {
   var $spaceBackground = $('.js-space-background');
+  var $homeScreenTitles = $('.js-home-screen-text');
+  var $homeScreenImage = $('.js-home-screen-image');
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
     scrollOverflow: true,
+    afterLoad: function afterLoad(origin, destination) {
+      if (destination.index === 0) {
+        $homeScreenTitles.addClass('is-active');
+        $homeScreenImage.addClass('is-active');
+      }
+    },
     onLeave: function onLeave(origin, destination) {
       if (destination.index === 1) {
         $spaceBackground.css('opacity', 1);

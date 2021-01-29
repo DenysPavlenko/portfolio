@@ -1,10 +1,15 @@
 include /components/image
 include /components/scroll-indicator
+include /components/pop-animation
 
 .home-screen
   .home-screen__container.container
     .home-screen__row.row
       .home-screen__content
-        span.home-screen__title <span>Front-end</span> <br/>developer
-        +image({bgimage:'images/photo.jpg', classes:'home-screen__image'})
+        +pop-animation({classes:'js-home-screen-text'})
+          span.home-screen__title Front-end
+        +pop-animation({classes:'js-home-screen-text', delay:'0.2s'})
+          span.home-screen__sub-title developer
+        +pop-animation({classes:'js-home-screen-image home-screen__image', sm: true, delay:'0.7s'})
+          +image({bgimage:'images/photo.jpg'})
   +scroll-indicator({})
