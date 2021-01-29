@@ -790,16 +790,6 @@ p,
   margin-top: -52px;
 }
 
-.preview-screen__background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  max-height: 100vh;
-  z-index: -1;
-}
-
 .preview-screen__row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
