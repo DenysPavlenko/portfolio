@@ -10,7 +10,6 @@ include /components/preview-item
 
 .preview-screen.js-preview-screen
   .preview-screen__container.container
-    .preview-screen__row.row
-      each item, idx in data
-        +preview-item({item, classes:`preview-screen__item js-preview-screen-item ${idx === 0 ? 'is-active' : ''}`})
+    each item, idx in data
+      +preview-item({item, classes:`preview-screen__item js-preview-screen-item ${idx === 0 ? 'is-active' : ''}`})
   +scroll-indicator({})

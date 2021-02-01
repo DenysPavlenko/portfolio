@@ -1,13 +1,15 @@
 .preview-item
-  display: flex
-  justify-content: center
+  +row()
   align-items: center
-  &:not(:last-child)
-    margin-bottom: 100px
+  justify-content: center
   &__info
     +col(5)
-  &__preview
-    +col(5)
-    height: 400px
+    +media-max($bp-sm)
+      +col(10)
+      order: 1
   &__image
-    background-size: contain
+    +col(5)
+    +media-max($bp-sm)
+      +col(10)
+      order: 0
+      margin-bottom: 30px

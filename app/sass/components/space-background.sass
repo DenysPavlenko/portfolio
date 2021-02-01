@@ -41,10 +41,18 @@
       background-size: contain
   &__circle
     top: 0
-    left: 43%
-    width: 50%
+    right: 0
+    width: 60%
     height: 100%
     z-index: 2
+    +media-max($bp-sm)
+      width: 90%
+      right: 0
+    .space-background__image
+      background-size: contain
+      background-position: left center
+      +media-max($bp-sm)
+        background-size: cover
   &__right-top-dots
     top: 6.5%
     right: 7%

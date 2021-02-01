@@ -7,6 +7,7 @@ const fullPage = () => {
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
     scrollOverflow: true,
+    // responsiveHeight: 540,
     afterLoad: (origin, destination) => {
       if (destination.index === 0) {
         $homeScreenTitles.addClass('is-active');

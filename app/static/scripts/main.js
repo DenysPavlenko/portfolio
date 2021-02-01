@@ -8,6 +8,7 @@ var fullPage = function fullPage() {
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
     scrollOverflow: true,
+    // responsiveHeight: 540,
     afterLoad: function afterLoad(origin, destination) {
       if (destination.index === 0) {
         $homeScreenTitles.addClass('is-active');
@@ -47,13 +48,7 @@ var previewScreen = function previewScreen() {
 
   handlePadding(); // Set padding on resize to $ps with a small dealy
 
-  var timeOut;
-  $window.on('resize', function () {
-    clearTimeout(timeOut);
-    timeOut = setTimeout(function () {
-      handlePadding();
-    }, 500);
-  });
+  $window.on('resize', handlePadding);
 };
 
 var about = function about() {

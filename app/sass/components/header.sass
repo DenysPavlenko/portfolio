@@ -5,13 +5,17 @@
   left: 0
   padding: 40px 0
   z-index: 100
+  +media-max($bp-lg)
+    padding: 20px 0
   &__container
     display: flex
     justify-content: space-between
     align-items: center
-    +container($cnt-xxl)
+    +container($cnt)
   &__logo
     width: 60px
+    +media-max($bp-sm)
+      width: 40px
   &__menu
     user-select: none
   &__menu-links

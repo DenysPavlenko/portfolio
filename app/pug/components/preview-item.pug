@@ -12,5 +12,5 @@ mixin preview-item({item, classes})
   div(class=classnames)
     .preview-item__info
       +preview-info({item})
-    .preview-item__preview
-      +image({bgimage:item.image, classes:'preview-item__image'})
+    .preview-item__image
+      +image({src:item.image})

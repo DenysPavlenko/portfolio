@@ -3,6 +3,13 @@
   align-items: center
   justify-content: space-between
   flex-wrap: wrap
+  &.social-links--sm-column
+    +media-max($bp-sm)
+      flex-direction: column
+      .social-links__link
+        &:not(:last-child)
+          margin-right: 0
+          margin-bottom: 40px
   &__link
     &:not(:last-child)
       margin-right: 10px

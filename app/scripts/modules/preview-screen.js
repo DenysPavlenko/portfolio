@@ -17,13 +17,7 @@ const previewScreen = () => {
   // Set padding to $ps.
   handlePadding();
   // Set padding on resize to $ps with a small dealy
-  let timeOut;
-  $window.on('resize', () => {
-    clearTimeout(timeOut);
-    timeOut = setTimeout(() => {
-      handlePadding();
-    }, 500);
-  });
+  $window.on('resize', handlePadding);
 };
 
 export default previewScreen;
