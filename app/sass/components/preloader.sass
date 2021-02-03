@@ -1,0 +1,26 @@
+.preloader
+  position: relative
+  background-color: $c-dark
+  height: 100vh
+  width: 100vw
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  z-index: 1000
+  &__wrap
+    position: relative
+  &__logo
+    width: 100px
+  &__fog
+    position: absolute
+    top: -40px
+    left: -40px
+    width: 400px
+    animation: fog 3s forwards
+
+@keyframes fog
+  0%
+    transform: translate(0, 0)
+  100%
+    transform: translate(-70%, -70%)

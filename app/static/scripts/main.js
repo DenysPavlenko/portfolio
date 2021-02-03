@@ -1,5 +1,9 @@
 'use strict';
 
+var preloader = function preloader() {
+  $('.js-preloader').fadeOut();
+};
+
 var fullPage = function fullPage() {
   var $spaceBackground = $('.js-space-background');
   var $homeScreenTitles = $('.js-home-screen-text');
@@ -103,4 +107,6 @@ $(function () {
   spaceBackground();
 }); // On window load
 
-$(window).on('load', function () {});
+$(window).on('load', function () {
+  preloader();
+});

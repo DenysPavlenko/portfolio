@@ -1,4 +1,5 @@
 'use strict';
+import preloader from './modules/preloader';
 import fullPage from './modules/full-page';
 import previewScreen from './modules/preview-screen';
 import about from './modules/about';
@@ -13,4 +14,6 @@ $(function () {
 });
 
 // On window load
-$(window).on('load', function () { });
+$(window).on('load', function () {
+  preloader();
+});
