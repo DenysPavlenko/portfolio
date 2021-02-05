@@ -3,7 +3,7 @@ const rollup = require('gulp-better-rollup');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync');
-const babel = require('rollup-plugin-babel')
+const babel = require('rollup-plugin-babel');
 
 const scripts = () => {
   return src(DEV_PATHS.scripts.entry)
