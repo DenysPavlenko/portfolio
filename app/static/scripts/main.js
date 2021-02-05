@@ -12,7 +12,6 @@ var fullPage = function fullPage() {
   new fullpage('.portfolio', {
     sectionSelector: '.js-portfolio-screen',
     scrollOverflow: true,
-    // responsiveHeight: 540,
     afterLoad: function afterLoad(origin, destination) {
       if (destination.index === 0) {
         $homeScreenTitles.addClass('is-active');
@@ -38,6 +37,7 @@ var previewScreen = function previewScreen() {
   var $psItems = $('.js-preview-screen-item');
   var $psFirstItem = $psItems.eq(0);
   var $window = $(window);
+  var psFirstItemImage = $psFirstItem.find('img')[0];
   var psFirstItemHeight, windowHeight;
 
   var handlePadding = function handlePadding() {
@@ -47,10 +47,14 @@ var previewScreen = function previewScreen() {
 
     var py = (windowHeight - psFirstItemHeight) / 2;
     $ps.css('padding', "".concat(py, "px 0"));
-  }; // Set padding to $ps.
+  }; // Set padding to $ps when the first image has loaded.
 
 
-  handlePadding(); // Set padding on resize to $ps with a small dealy
+  psFirstItemImage.onload = function () {
+    handlePadding();
+  };
+
+  psFirstItemImage.src = 'images/previews/celia.png'; // Set padding on resize to $ps with a small dealy
 
   $window.on('resize', handlePadding);
 };

@@ -3,6 +3,7 @@ const previewScreen = () => {
   const $psItems = $('.js-preview-screen-item');
   const $psFirstItem = $psItems.eq(0);
   const $window = $(window);
+  const psFirstItemImage = $psFirstItem.find('img')[0];
   let psFirstItemHeight, windowHeight;
 
   const handlePadding = () => {
@@ -14,9 +15,13 @@ const previewScreen = () => {
     $ps.css('padding', `${py}px 0`);
   };
 
-  // Set padding to $ps.
-  handlePadding();
-  // Set padding on resize to $ps with a small dealy
+  // Set padding to $ps when the first image has loaded.
+  psFirstItemImage.onload = () => {
+    handlePadding();
+  };
+  psFirstItemImage.src = 'images/previews/celia.png';
+
+  // Set padding to $ps on resize
   $window.on('resize', handlePadding);
 };
 
