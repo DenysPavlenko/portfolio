@@ -54,7 +54,7 @@ var previewScreen = function previewScreen() {
     handlePadding();
   };
 
-  psFirstItemImage.src = 'images/previews/celia.png'; // Set padding on resize to $ps with a small dealy
+  psFirstItemImage.src = 'images/previews/celia.png'; // Set padding to $ps on resize
 
   $window.on('resize', handlePadding);
 };
