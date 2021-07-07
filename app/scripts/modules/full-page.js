@@ -4,8 +4,8 @@ const fullPage = () => {
   const $homeScreenImage = $('.js-home-screen-image');
   const $footerScreenLinks = $('.js-footer-screen-links');
 
-  new fullpage('.portfolio', {
-    sectionSelector: '.js-portfolio-screen',
+  new fullpage('.js-portfolio', {
+    sectionSelector: '.portfolio__screen',
     scrollOverflow: true,
     afterLoad: (origin, destination) => {
       if (destination.index === 0) {
@@ -23,7 +23,6 @@ const fullPage = () => {
         $spaceBackground.css('opacity', 0)
       }
     },
-
   });
 };
 

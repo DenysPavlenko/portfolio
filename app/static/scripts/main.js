@@ -9,8 +9,8 @@ var fullPage = function fullPage() {
   var $homeScreenTitles = $('.js-home-screen-text');
   var $homeScreenImage = $('.js-home-screen-image');
   var $footerScreenLinks = $('.js-footer-screen-links');
-  new fullpage('.portfolio', {
-    sectionSelector: '.js-portfolio-screen',
+  new fullpage('.js-portfolio', {
+    sectionSelector: '.portfolio__screen',
     scrollOverflow: true,
     afterLoad: function afterLoad(origin, destination) {
       if (destination.index === 0) {
