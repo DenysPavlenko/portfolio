@@ -4,33 +4,33 @@ var preloader = function preloader() {
   $('.js-preloader').fadeOut();
 };
 
-var fullPage = function fullPage() {
+function fullPage () {
   var $spaceBackground = $('.js-space-background');
   var $homeScreenTitles = $('.js-home-screen-text');
   var $homeScreenImage = $('.js-home-screen-image');
   var $footerScreenLinks = $('.js-footer-screen-links');
-  new fullpage('.js-portfolio', {
+  $('.js-portfolio').fullpage({
     sectionSelector: '.portfolio__screen',
     scrollOverflow: true,
     afterLoad: function afterLoad(origin, destination) {
-      if (destination.index === 0) {
+      if (destination === 1) {
         $homeScreenTitles.addClass('is-active');
         $homeScreenImage.addClass('is-active');
       }
 
-      if (destination.index === 2) {
+      if (destination === 3) {
         $footerScreenLinks.addClass('is-active');
       }
     },
     onLeave: function onLeave(origin, destination) {
-      if (destination.index === 1) {
+      if (destination === 2) {
         $spaceBackground.css('opacity', 1);
-      } else if (destination.index === 0 || destination.index === 2) {
+      } else if (destination === 1 || destination === 3) {
         $spaceBackground.css('opacity', 0);
       }
     }
   });
-};
+}
 
 var previewScreen = function previewScreen() {
   var $ps = $('.js-preview-screen');

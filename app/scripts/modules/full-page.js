@@ -1,29 +1,27 @@
-const fullPage = () => {
+export default function () {
   const $spaceBackground = $('.js-space-background');
   const $homeScreenTitles = $('.js-home-screen-text');
   const $homeScreenImage = $('.js-home-screen-image');
   const $footerScreenLinks = $('.js-footer-screen-links');
 
-  new fullpage('.js-portfolio', {
+  $('.js-portfolio').fullpage({
     sectionSelector: '.portfolio__screen',
     scrollOverflow: true,
     afterLoad: (origin, destination) => {
-      if (destination.index === 0) {
+      if (destination === 1) {
         $homeScreenTitles.addClass('is-active');
         $homeScreenImage.addClass('is-active');
       }
-      if (destination.index === 2) {
+      if (destination === 3) {
         $footerScreenLinks.addClass('is-active');
       }
     },
     onLeave: (origin, destination) => {
-      if (destination.index === 1) {
+      if (destination === 2) {
         $spaceBackground.css('opacity', 1)
-      } else if (destination.index === 0 || destination.index === 2) {
+      } else if (destination === 1 || destination === 3) {
         $spaceBackground.css('opacity', 0)
       }
     },
   });
 };
-
-export default fullPage;

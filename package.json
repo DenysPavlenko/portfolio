@@ -41,7 +41,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "fullpage.js": "^3.0.9",
+    "fullpage.js": "^2.9.7",
     "jquery": "^3.5.1",
     "parallax-js": "^3.1.0"
   }
