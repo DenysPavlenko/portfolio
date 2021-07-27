@@ -88,10 +88,10 @@ var about = function about() {
     $about.off('transitionend', handleAnimation); // Lock/unlock fullpage scroll
 
     if ($about.hasClass('is-active')) {
-      fullpage_api.setAllowScrolling(false);
+      $.fn.fullpage.setAllowScrolling(false);
       isOpen = true;
     } else {
-      fullpage_api.setAllowScrolling(true);
+      $.fn.fullpage.setAllowScrolling(true);
       isOpen = false;
     }
 
